@@ -32,11 +32,5 @@ namespace ForustaSpotify.Api.Controllers.Api
             var responseData = await _artistReadService.SearchArtists(name);
             return Json(responseData);
         }
-
-        [Route("test")]
-        public async Task<IActionResult> Test()
-        {
-            throw new Exception("This is a test exception");
-        }
     }
 }
