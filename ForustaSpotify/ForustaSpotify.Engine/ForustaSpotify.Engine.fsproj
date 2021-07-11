@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="TestUser.fs" />
     <Compile Include="Filter.fs" />
   </ItemGroup>
 
