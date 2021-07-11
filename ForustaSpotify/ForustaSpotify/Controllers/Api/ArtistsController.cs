@@ -29,8 +29,8 @@ namespace ForustaSpotify.Api.Controllers.Api
         [Route("search")]
         public async Task<IActionResult> Search([FromQuery] string name)
         {
-            var responseData = await _artistReadService.SearchArtists(name);
-            return Json(responseData);
+            var artists = await _artistReadService.SearchArtists(name);
+            return Json(artists);
         }
     }
 }

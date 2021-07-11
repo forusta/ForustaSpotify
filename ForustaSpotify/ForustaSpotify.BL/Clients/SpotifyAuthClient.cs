@@ -38,19 +38,19 @@ namespace ForustaSpotify.BL.Clients
             return SpotifyUrls.AuthUrl + queryBuilder.ToQueryString().ToString();
         }
 
-        public async Task<SpotifyAuthTokenModel> Auth(string inputCode)
+        public async Task<SpotifyAuthTokenModel> Auth(string inputCode, string returnUrl)
         {
             if (string.IsNullOrWhiteSpace(inputCode))
             {
                 return new SpotifyAuthTokenModel();
             }
 
-            var responseString = await GetSpotifyResponse(inputCode);
+            var responseString = await GetSpotifyResponse(inputCode, returnUrl);
 
             return JsonConvert.DeserializeObject<SpotifyAuthTokenModel>(responseString);
         }
 
-        private async Task<string> GetSpotifyResponse(string inputCode)
+        private async Task<string> GetSpotifyResponse(string inputCode, string returnUrl)
         {
             string responseString = "";
             using (HttpClient client = new HttpClient())
@@ -67,7 +67,7 @@ namespace ForustaSpotify.BL.Clients
                 FormUrlEncodedContent formContent = new FormUrlEncodedContent(new[]
                 {
                     new KeyValuePair<string, string>("code", inputCode),
-                    //new KeyValuePair<string, string>("redirect_uri", redirectUrl),
+                    new KeyValuePair<string, string>("redirect_uri", returnUrl),
                     new KeyValuePair<string, string>("grant_type", "authorization_code"),
                 });
 

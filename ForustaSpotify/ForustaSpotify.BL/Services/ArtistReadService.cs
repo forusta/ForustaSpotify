@@ -8,6 +8,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.FSharp.Collections;
+using ForustaSpotify.Engine.Models;
+using ForustaSpotify.Engine;
 
 namespace ForustaSpotify.BL.Services
 {

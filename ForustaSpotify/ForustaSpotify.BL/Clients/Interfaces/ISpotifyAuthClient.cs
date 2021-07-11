@@ -23,6 +23,6 @@ namespace ForustaSpotify.BL.Clients.Interfaces
         /// </summary>
         /// <param name="inputCode"></param>
         /// <returns>Return token model</returns>
-        Task<SpotifyAuthTokenModel> Auth(string inputCode);
+        Task<SpotifyAuthTokenModel> Auth(string inputCode, string returnUrl);
     }
 }

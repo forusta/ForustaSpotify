@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForustaSpotify.BL", "Forust
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForustaSpotify.Data", "ForustaSpotify.Data\ForustaSpotify.Data.csproj", "{DC49ADF9-59B9-402A-8344-B6171172062C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForustaSpotify.Tests", "ForustaSpotify.Tests\ForustaSpotify.Tests.csproj", "{23363520-7131-4F4F-BC85-08CA1E12BAD9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForustaSpotify.Tests", "ForustaSpotify.Tests\ForustaSpotify.Tests.csproj", "{23363520-7131-4F4F-BC85-08CA1E12BAD9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForustaSpotify.Common", "ForustaSpotify.Common\ForustaSpotify.Common.csproj", "{D913911F-F638-4283-9795-820A79AA3E7D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForustaSpotify.Common", "ForustaSpotify.Common\ForustaSpotify.Common.csproj", "{D913911F-F638-4283-9795-820A79AA3E7D}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ForustaSpotify.Engine", "ForustaSpotify.Engine\ForustaSpotify.Engine.fsproj", "{95C5CD22-5D78-4FC5-8F8A-1DE7CC150949}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{D913911F-F638-4283-9795-820A79AA3E7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D913911F-F638-4283-9795-820A79AA3E7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D913911F-F638-4283-9795-820A79AA3E7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95C5CD22-5D78-4FC5-8F8A-1DE7CC150949}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95C5CD22-5D78-4FC5-8F8A-1DE7CC150949}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95C5CD22-5D78-4FC5-8F8A-1DE7CC150949}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95C5CD22-5D78-4FC5-8F8A-1DE7CC150949}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -34,7 +34,10 @@ namespace ForustaSpotify.Api.Controllers.Api
         [Route("/callback")]
         public async Task<IActionResult> AuthCallback(string code)
         {
-            var authTokenModel = await _spotifyAuthService.Auth(code);
+            var controllerName = ControllerContext.ActionDescriptor.ControllerName;
+            var redirectUrl = Url.Action(nameof(AuthCallback), controllerName, null, HttpContext.Request.Scheme);
+
+            var authTokenModel = await _spotifyAuthService.Auth(code, redirectUrl);
 
             var cookies = HttpContext.Response.Cookies;
 
